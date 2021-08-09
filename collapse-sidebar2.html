@@ -1,0 +1,156 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="mystyle.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>Heading</h3>
+            </div>
+
+            <ul class="list-unstyled components">
+                <p>Dummy Heading</p>
+                <li>
+                    <a href="qr-code.html"><i class="fa fa-globe mr-1" aria-hidden="true"></i>GroupTalk Web</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-cog mr-1" aria-hidden="true"></i>Settings</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-info mr-1" aria-hidden="true"></i>User Guide</a>
+                </li>
+                <li>
+                    <a href="contact-us.html"><i class="fa fa-phone mr-1" aria-hidden="true"></i>Contact</a>
+                </li>
+                <li>
+                    <a href="faq.html"><i class="fa fa-question mr-1" aria-hidden="true"></i>FAQ'S</a>
+                </li>
+                <li>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false"
+                        class="dropdown-toggle">Pages</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a href="#">Page 1</a>
+                        </li>
+                        <li>
+                            <a href="#">Page 2</a>
+                        </li>
+                        <li>
+                            <a href="#">Page 3</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+
+            <nav class="navbar navbar-expand-lg navbar-expand-md navbar-expand-sm navbar-light bg-light py-1">
+                <button type="button" id="sidebarCollapse" class="btn text-sidebar bg-turbo-yellow">
+                    <i class="fa fa-bars"></i>
+                    <span></span>
+                </button>
+                <ul class="ml-auto justify-content-end nav">
+                    <li class="nav-item">
+                        <form class="mx-2 my-auto d-inline w-100 ml-auto">
+                            <div class="input-group">
+                                <input type="text" class="form-control form-control border border-right-0"
+                                    placeholder="Search..." id="search">
+                                <span class="input-group-append">
+                                    <button class="btn btn-warning border border-left-0" type="button">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                </span>
+                            </div>
+                        </form>
+                    </li>
+                    <li class="nav-item my-auto ml-1">
+                        <div class="dropdown">
+                            <button type="button" class="btn btn-info" data-toggle="dropdown">
+                                <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <a class="dropdown-item" href="#"><i class="bi bi-arrow-down-up"
+                                        style="text-shadow: 1px 0 #999;"></i>A
+                                    TO Z</a>
+                                <a class="dropdown-item" href="#"><i class="bi bi-telephone-inbound-fill"></i>Upcoming
+                                    Calls</a>
+                                <a class="dropdown-item" href="#"><i class="bi bi-check2-square"
+                                        style="text-shadow: 1px 0 #999;"></i>Recently
+                                    Created</a>
+                                <a class="dropdown-item" href="#"><i class="fa fa-history" aria-hidden="true"></i>Recent
+                                    Calls</a>
+                                <a class="dropdown-item" href="#"><i class="fa fa-users" aria-hidden="true"></i>Maximum
+                                    Members</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <div class="container-fluid">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                    et
+                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip
+                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                    dolore eu
+                    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                    deserunt mollit anim id est laborum.</p>
+                <div class="inner-fabs">
+                    <div class="fab round" id="fab3" data-tooltip="Create"><i class="fa fa-user-plus"
+                            aria-hidden="true"></i></div>
+                    <div class="fab round" id="fab2" data-tooltip="user"><i class="fa fa-user" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="fab round"><i class="fa fa-plus" aria-hidden="true" id="fab1"></i></div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+        let fab1 = document.getElementById('fab1');
+        let innerFabs = document.getElementsByClassName('inner-fabs')[0];
+
+        fab1.addEventListener('click', function () {
+            innerFabs.classList.toggle('show');
+        });
+
+        document.addEventListener('click', function (e) {
+            switch (e.target.id) {
+                case "fab1":
+                case "fab2":
+                case "fab3":
+                case "fabIcon":
+                    break;
+                default:
+                    innerFabs.classList.remove('show');
+                    break;
+            }
+
+        });
+    </script>
+</body>
+
+</html>
